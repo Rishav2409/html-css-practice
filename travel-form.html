@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
+    <title>TravelStud.com - Travel Booking Form</title>
+
+    <!-- Internal CSS -->
+    <style>
+
+        /* Reset Default Browser Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Form Container */
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 350px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Form Sections */
+        form div {
+            margin-bottom: 20px;
+        }
+
+        /* Labels */
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Input Fields & Select Box */
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        /* Focus Effect */
+        input:focus,
+        select:focus {
+            border-color: #4a90e2;
+            outline: none;
+            box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+        }
+
+        /* Submit Button */
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        /* Button Hover Effect */
+        button:hover {
+            background-color: #357ABD;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Travel Booking Form -->
+    <form action="">
+
+        <!-- Name Input -->
+        <div>
+            <label for="name">Name:</label>
+            <input id="name" type="text" placeholder="Enter your name">
+        </div>
+
+        <!-- Email Input -->
+        <div>
+            <label for="email">Email:</label>
+            <input id="email" type="email" placeholder="Enter your email">
+        </div>
+
+        <!-- Destination Dropdown -->
+        <div>
+            <label for="destination">Destination:</label>
+
+            <select id="destination">
+
+                <option value="">Select your destination</option>
+
+                <option value="bali">Bali</option>
+                <option value="paris">Paris</option>
+                <option value="tokyo">Tokyo</option>
+
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
