@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
+    <title>Tables in HTML</title>
+
+    <!-- Internal CSS -->
+    <style>
+
+        /* Table Styling */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff5f5;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Table Header */
+        th {
+            background-color: #e23744;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* Table Data */
+        td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Alternate Row Colors */
+        tr:nth-child(even) {
+            background-color: #ffe5e5;
+        }
+
+        /* Hover Effect */
+        tr:hover {
+            background-color: #ffcccc;
+            transition: 0.3s;
+        }
+
+        /* Borders */
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        /* Heading Styling */
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Main Heading -->
+    <h1>TABLES IN HTML</h1>
+
+    <!-- Table Starts -->
+    <table>
+
+        <!-- Table Head -->
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+
+        <!-- Table Body -->
+        <tbody>
+
+            <tr>
+                <td>John Doe</td>
+                <td>30</td>
+                <td>New York</td>
+            </tr>
+
+            <tr>
+                <td>Jane Smith</td>
+                <td>25</td>
+                <td>Los Angeles</td>
+            </tr>
+
+            <tr>
+                <td>Emily Johnson</td>
+                <td>35</td>
+                <td>Chicago</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+</html>
