@@ -1,0 +1,289 @@
+/*
+  ╔══════════════════════════════════════════════════════════╗
+  ║         Archy Garden — Restaurant Menu                   ║
+  ║         CSS designed with Claude AI (Anthropic)          ║
+  ║         HTML written independently by Rishav Raj         ║
+  ╚══════════════════════════════════════════════════════════╝
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500&display=swap');
+
+/* ── CSS VARIABLES ── */
+:root {
+  --bg:          #faf6f0;
+  --surface:     #f2ebe0;
+  --card:        #ffffff;
+  --accent:      #7a5c3a;
+  --accent-light:#c49a6c;
+  --green:       #4a6741;
+  --green-light: #d4e6c3;
+  --text:        #1e1a14;
+  --text-soft:   #5a4f42;
+  --muted:       #9c8f82;
+  --border:      #e0d5c5;
+  --shadow:      0 4px 24px rgba(90, 60, 20, 0.08);
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+/* ════════════════════════════════════
+   HEADER
+════════════════════════════════════ */
+header {
+  position: relative;
+  background: var(--green);
+  text-align: center;
+  padding: 90px 24px 80px;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(212, 230, 195, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(212, 230, 195, 0.10) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+header::after {
+  content: '\2726  ARCHY GARDEN  \2726';
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 6px;
+  color: rgba(212, 230, 195, 0.55);
+  white-space: nowrap;
+}
+
+header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.2rem, 8vw, 6rem);
+  font-weight: 700;
+  color: #f5f0e8;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+header p {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--green-light);
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+/* ════════════════════════════════════
+   MAIN
+════════════════════════════════════ */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 56px 28px 80px;
+}
+
+main > p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  color: var(--text-soft);
+  line-height: 1.9;
+  max-width: 680px;
+  margin: 0 auto 48px;
+  border-left: 3px solid var(--accent-light);
+  padding-left: 20px;
+}
+
+main > h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 600;
+  color: var(--accent);
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 28px;
+}
+
+/* ════════════════════════════════════
+   NAV — sticky pill bar
+════════════════════════════════════ */
+nav {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 60px;
+  padding: 10px 16px;
+  margin-bottom: 64px;
+  position: sticky;
+  top: 16px;
+  z-index: 100;
+  box-shadow: var(--shadow);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  transition: all 0.25s ease;
+}
+
+nav ul li a:hover {
+  background: var(--green);
+  color: #f5f0e8;
+}
+
+/* ════════════════════════════════════
+   SECTIONS
+════════════════════════════════════ */
+section {
+  margin-bottom: 72px;
+  padding-top: 16px;
+}
+
+section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 600;
+  color: var(--green);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+section h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--border), transparent);
+}
+
+/* item name */
+section h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+  letter-spacing: 0.3px;
+}
+
+/* item card */
+section p {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-light);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  transition: box-shadow 0.2s ease, border-left-color 0.2s ease;
+}
+
+section p:hover {
+  box-shadow: var(--shadow);
+  border-left-color: var(--green);
+}
+
+/* price */
+section p span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ════════════════════════════════════
+   FOOTER
+════════════════════════════════════ */
+footer {
+  background: var(--green);
+  color: var(--green-light);
+  text-align: center;
+  padding: 48px 24px;
+  font-size: 0.9rem;
+}
+
+footer address {
+  font-style: normal;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+footer address a {
+  color: var(--accent-light);
+  text-decoration: none;
+  display: block;
+  transition: opacity 0.2s;
+}
+
+footer address a:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+footer p {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  display: block !important;
+  color: rgba(212, 230, 195, 0.55);
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+}
+
+/* ════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════ */
+@media (max-width: 600px) {
+  header         { padding: 70px 20px 60px; }
+  main           { padding: 40px 18px 60px; }
+  nav            { border-radius: 16px; top: 8px; }
+  nav ul li a    { padding: 7px 12px; font-size: 0.8rem; }
+  section p      { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
