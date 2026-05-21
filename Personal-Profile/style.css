@@ -1,0 +1,474 @@
+/* ═══════════════════════════════════════════════════
+   Personal Profile Website - Rishav Raj
+   Modern Responsive CSS Design
+   Designed for GitHub Portfolio Upload
+   ═══════════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────────────
+   IMPORTING GOOGLE FONTS
+   ───────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ─────────────────────────────────────────────
+   CSS VARIABLES (COLOR PALETTE)
+   ───────────────────────────────────────────── */
+:root {
+
+    /* Main background */
+    --bg-color: #eaf6ff;
+
+    /* Secondary background */
+    --surface-color: #d9eefc;
+
+    /* White card */
+    --card-color: #ffffff;
+
+    /* Accent color */
+    --accent-color: #ff7aa2;
+
+    /* Darker accent */
+    --accent-dark: #d94f79;
+
+    /* Main text */
+    --text-color: #183042;
+
+    /* Soft paragraph text */
+    --soft-text: #506b7b;
+
+    /* Border color */
+    --border-color: #bdddee;
+
+    /* Shadow */
+    --shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ─────────────────────────────────────────────
+   RESET DEFAULT STYLES
+   ───────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ─────────────────────────────────────────────
+   BODY STYLING
+   ───────────────────────────────────────────── */
+body {
+
+    background: var(--bg-color);
+
+    color: var(--text-color);
+
+    font-family: 'Poppins', sans-serif;
+
+    line-height: 1.8;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+/* ─────────────────────────────────────────────
+   HEADER SECTION
+   ───────────────────────────────────────────── */
+header {
+
+    background: linear-gradient(
+        135deg,
+        #dff3ff,
+        #f4fbff
+    );
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Decorative glow effect */
+header::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 122, 162, 0.18) 0%,
+        transparent 70%
+    );
+
+    top: -150px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+/* ─────────────────────────────────────────────
+   PROFILE IMAGE
+   ───────────────────────────────────────────── */
+header img {
+
+    width: 170px;
+    height: 170px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 5px solid var(--accent-color);
+
+    box-shadow:
+        0 0 0 10px rgba(255, 122, 162, 0.15),
+        0 12px 30px rgba(0, 0, 0, 0.12);
+
+    margin-bottom: 24px;
+
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on image */
+header img:hover {
+    transform: scale(1.04);
+}
+
+/* ─────────────────────────────────────────────
+   MAIN HEADING
+   ───────────────────────────────────────────── */
+header h1 {
+
+    font-size: clamp(2.5rem, 6vw, 4rem);
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+
+    color: var(--text-color);
+
+    letter-spacing: -1px;
+}
+
+/* Tagline text */
+header p {
+
+    color: var(--accent-dark);
+
+    font-size: 1.05rem;
+
+    font-weight: 500;
+
+    letter-spacing: 1px;
+}
+
+/* ─────────────────────────────────────────────
+   HORIZONTAL LINE
+   ───────────────────────────────────────────── */
+hr {
+
+    border: none;
+
+    border-top: 1px solid var(--border-color);
+
+    width: 100%;
+}
+
+/* ─────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────── */
+main {
+
+    max-width: 950px;
+
+    margin: auto;
+
+    padding: 50px 22px;
+}
+
+/* ─────────────────────────────────────────────
+   SECTION DESIGN
+   ───────────────────────────────────────────── */
+section {
+
+    background: var(--card-color);
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    margin: 35px 0;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Section hover effect */
+section:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.10);
+}
+
+/* ─────────────────────────────────────────────
+   SECTION HEADINGS
+   ───────────────────────────────────────────── */
+section h2 {
+
+    font-size: 2rem;
+
+    margin-bottom: 18px;
+
+    color: var(--text-color);
+
+    position: relative;
+
+    display: inline-block;
+}
+
+/* Underline effect */
+section h2::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 100%;
+    height: 4px;
+
+    background: var(--accent-color);
+
+    border-radius: 10px;
+
+    transform: scaleX(0.4);
+
+    transform-origin: left;
+
+    transition: transform 0.3s ease;
+}
+
+/* Hover underline animation */
+section:hover h2::after {
+
+    transform: scaleX(1);
+}
+
+/* ─────────────────────────────────────────────
+   PARAGRAPH TEXT
+   ───────────────────────────────────────────── */
+section p {
+
+    color: var(--soft-text);
+
+    font-size: 1.05rem;
+}
+
+/* ─────────────────────────────────────────────
+   HOBBY LIST
+   ───────────────────────────────────────────── */
+section ul {
+
+    list-style: none;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 18px;
+}
+
+/* Hobby pill design */
+section ul li {
+
+    background: #f7fcff;
+
+    border: 1px solid var(--border-color);
+
+    padding: 12px 20px;
+
+    border-radius: 999px;
+
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+
+    cursor: default;
+}
+
+/* Hover effect */
+section ul li:hover {
+
+    background: var(--accent-color);
+
+    color: white;
+
+    border-color: var(--accent-color);
+
+    transform: translateY(-3px);
+}
+
+/* ─────────────────────────────────────────────
+   SOCIAL LINKS
+   ───────────────────────────────────────────── */
+.connect-links {
+
+    display: flex;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+/* Remove inherited list style */
+.connect-links li {
+
+    padding: 0 !important;
+
+    background: none !important;
+
+    border: none !important;
+}
+
+/* Social buttons */
+.connect-links a {
+
+    text-decoration: none;
+
+    background: var(--card-color);
+
+    border: 1px solid var(--border-color);
+
+    color: var(--text-color);
+
+    padding: 12px 26px;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 140px;
+
+    box-shadow: var(--shadow);
+}
+
+/* Social button hover */
+.connect-links a:hover {
+
+    background: var(--accent-color);
+
+    color: white;
+
+    border-color: var(--accent-color);
+
+    transform: translateY(-3px);
+}
+
+/* ─────────────────────────────────────────────
+   EMAIL LINK
+   ───────────────────────────────────────────── */
+section p a {
+
+    color: var(--accent-dark);
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+/* Email hover */
+section p a:hover {
+
+    text-decoration: underline;
+}
+
+/* ─────────────────────────────────────────────
+   FOOTER SECTION
+   ───────────────────────────────────────────── */
+footer {
+
+    background: var(--surface-color);
+
+    text-align: center;
+
+    padding: 30px 20px;
+
+    color: var(--soft-text);
+
+    font-size: 0.95rem;
+
+    border-top: 1px solid var(--border-color);
+}
+
+/* ─────────────────────────────────────────────
+   RESPONSIVE DESIGN
+   ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+    /* Header adjustments */
+    header {
+
+        padding: 60px 20px;
+    }
+
+    /* Smaller profile image */
+    header img {
+
+        width: 140px;
+        height: 140px;
+    }
+
+    /* Smaller section heading */
+    section h2 {
+
+        font-size: 1.6rem;
+    }
+
+    /* Stack buttons vertically */
+    .connect-links {
+
+        flex-direction: column;
+    }
+
+    /* Full width social buttons */
+    .connect-links a {
+
+        width: 100%;
+    }
+
+    /* Reduce section padding */
+    section {
+
+        padding: 28px;
+    }
+}
