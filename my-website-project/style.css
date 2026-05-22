@@ -1,0 +1,67 @@
+/* =========================================
+   GLOBAL WEBSITE STYLING
+   Beginner Friendly CSS File
+   ========================================= */
+
+/* Apply style to the whole webpage */
+body {
+    background-color: #f4f8ff;   /* Light blue background */
+    color: #222222;              /* Dark text color */
+    font-family: Arial, sans-serif; /* Simple readable font */
+    margin: 0;                   /* Remove default spacing */
+    padding: 0;
+    line-height: 1.6;            /* Better readability */
+}
+
+/* Style for main heading */
+h1 {
+    color: #ff69b4;              /* Cherry blossom pink */
+    text-align: center;          /* Center align text */
+    margin-top: 20px;
+}
+
+/* Style for smaller headings */
+h2, h3 {
+    color: #444444;
+}
+
+/* Paragraph styling */
+p {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: #dbeafe;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Navigation links */
+nav a {
+    text-decoration: none;
+    color: #222;
+    margin: 10px;
+    font-weight: bold;
+}
+
+/* Hover effect for links */
+nav a:hover {
+    color: #ff69b4;
+}
+
+/* Button styling */
+button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #ff1493;
+}
