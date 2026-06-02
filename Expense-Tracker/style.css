@@ -1,0 +1,197 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    background:linear-gradient(
+    135deg,
+    #667eea,
+    #764ba2
+    );
+}
+
+.container{
+
+    width:100%;
+    max-width:700px;
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    color:white;
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.25);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.balance-card{
+
+    background:rgba(255,255,255,.15);
+
+    padding:20px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    margin-bottom:20px;
+}
+
+.balance-card h2{
+    margin-top:10px;
+    font-size:2rem;
+}
+
+.summary{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+    margin-bottom:25px;
+}
+
+.income-box,
+.expense-box{
+
+    padding:20px;
+
+    border-radius:15px;
+
+    text-align:center;
+}
+
+.income-box{
+    background:#16a34a;
+}
+
+.expense-box{
+    background:#dc2626;
+}
+
+.form-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-bottom:30px;
+}
+
+input,
+select{
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:1rem;
+}
+
+button{
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:white;
+
+    color:#5b4cf0;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.history h2{
+    margin-bottom:15px;
+}
+
+#transaction-list{
+    list-style:none;
+}
+
+.transaction{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px;
+
+    margin-bottom:10px;
+
+    border-radius:10px;
+
+    background:rgba(255,255,255,.15);
+}
+
+.income{
+    border-right:5px solid #22c55e;
+}
+
+.expense{
+    border-right:5px solid #ef4444;
+}
+
+.delete-btn{
+
+    background:#ef4444;
+
+    color:white;
+
+    padding:5px 10px;
+
+    border-radius:6px;
+}
+
+@media(max-width:600px){
+
+.summary{
+    grid-template-columns:1fr;
+}
+
+}
